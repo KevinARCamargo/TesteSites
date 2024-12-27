@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
+
     <!-- Cabeçalho -->
     <header>
         <nav>
             <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
                 <li><a href="#about">Sobre Nós</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#contact">Contato</a></li>
@@ -22,7 +25,8 @@
         <img src="imagens/Design sem nome.png" alt="Logo da Empresa" class="logo">
     </div>
 
-    <div class="hero">
+    <!-- Main -->
+    <div class="hero" id="home">
         <div class="hero-content">
             <h1>Sua Carga, Nossa Responsabilidade</h1>
             <p>Transporte com segurança, agilidade e transparência.</p>
@@ -31,14 +35,47 @@
                 <i class="fas fa-arrow-right"></i>
             </a>
         </div>
-        <div class="hero-image">
-            <img src="imagens/img-home.jpeg" alt="Caminhão de Transporte">
-        </div>
+        <div class="carousel">
+            <div class="carousel-container">
+              <img src="imagens/imgHome1.png" alt="Image 1" class="carousel-image active" />
+              <img src="imagens/imgHome2.png" alt="Image 2" class="carousel-image" />
+              <img src="imagens/imgHome4.jpeg" alt="Image 3" class="carousel-image" />
+            </div>
+            <!-- Controles -->
+            <button class="carousel-control prev">&lt;</button>
+            <button class="carousel-control next">&gt;</button>
+          </div>
     </div>
+
+    <!-- Sobre Nós -->
+    <section class="about-us" id="about">
+        <div class="about-container">
+            <div class="about-carousel">
+                <div class="about-carousel-container">
+                    <img src="imagens/equipe.jpeg" alt="Equipe da Empresa 1" class="about-carousel-image ">
+                    <img src="imagens/equipe2.jpg" alt="Equipe da Empresa 2" class="about-carousel-image active">
+                    <img src="imagens/equipe3.png" alt="Equipe da Empresa 3" class="about-carousel-image">
+                    
+                    <button class="about-carousel-control prev">&#8249;</button>
+                    <button class="about-carousel-control next">&#8250;</button>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2>Quem Somos</h2>
+                <p>
+                    Somos uma empresa dedicada ao transporte de cargas com segurança e eficiência. Nossa missão é fornecer um serviço transparente e confiável, garantindo que suas entregas cheguem no prazo e em perfeitas condições.
+                </p>
+                <p>
+                    Com mais de 30 anos de experiência, conquistamos a confiança de milhares de clientes em todo o país. Nossa equipe altamente qualificada está pronta para atender às suas necessidades de transporte com a máxima qualidade.
+                </p>
+                <a href="#contact" class="btn btn-about">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
     
     <section class="stats">
         <div class="stat">
-            <h3>+10 Anos</h3>
+            <h3>+30 Anos</h3>
             <p>No mercado</p>
         </div>
         <div class="stat">
@@ -52,7 +89,9 @@
     </section>
     
     <section class="values">
-        <h2>Nossos Valores</h2>
+        <div class="services-header">
+            <h2>Nossos Valores</h2>
+        </div>
         <div class="value-cards">
             <div class="card">
                 <h3>Confiança</h3>
@@ -69,47 +108,27 @@
         </div>
     </section>
     
-
-    <!-- Sobre Nós -->
-    <section class="about-us" id="about">
-        <div class="about-container">
-            <div class="about-image">
-                <img src="imagens/equipe.jpeg" alt="Equipe da Empresa">
-            </div>
-            <div class="about-content">
-                <h2>Quem Somos</h2>
-                <p>
-                    Somos uma empresa dedicada ao transporte de cargas com segurança e eficiência. Nossa missão é fornecer um serviço transparente e confiável, garantindo que suas entregas cheguem no prazo e em perfeitas condições.
-                </p>
-                <p>
-                    Com mais de 10 anos de experiência, conquistamos a confiança de milhares de clientes em todo o país. Nossa equipe altamente qualificada está pronta para atender às suas necessidades de transporte com a máxima qualidade.
-                </p>
-                <a href="#contact" class="btn btn-about">Entre em Contato</a>
-            </div>
-        </div>
-    </section>
-
     <section class="services" id="services">
-        <div class="services-header">
+        <div class="services-header" id="espacamento">
             <h2>Nossos Serviços</h2>
             <p>Oferecemos soluções de transporte seguras e eficientes para atender às suas necessidades.</p>
         </div>
         <div class="services-container">
             <div class="service-card">
-                <img src="img/cargo-delivery.png" alt="Entrega de Carga">
                 <h3>Entrega de Carga</h3>
                 <p>Transporte rápido e seguro de cargas com rastreamento em tempo real.</p>
             </div>
             <div class="service-card">
-                <img src="img/express-delivery.png" alt="Entrega Expressa">
                 <h3>Entrega Expressa</h3>
                 <p>Serviço de entrega prioritária para envios urgentes.</p>
             </div>
             <div class="service-card">
-                <img src="img/warehouse.png" alt="Armazenagem">
                 <h3>Armazenagem</h3>
                 <p>Armazéns modernos para estocagem e logística integrada.</p>
             </div>
+        </div>
+        <div class="services-image">
+            <img src="imagens/carreta3.jpeg" alt="Imagem Central">
         </div>
     </section>
 
@@ -119,38 +138,65 @@
                 <h2>Entre em Contato</h2>
                 <p>Entre em contato conosco para tirar dúvidas ou solicitar nossos serviços.</p>
                 <ul>
-                    <li><strong>Telefone:</strong> (11) 1234-5678</li>
-                    <li><strong>Email:</strong> contato@transportadora.com</li>
-                    <li><strong>Endereço:</strong> Rua das Transportadoras, 123, São Paulo, SP</li>
+                    <li><strong>Telefone:</strong> (35) 99140-0647</li>
+                    <li><strong>Email:</strong> transportesrodoviariositau17@gmail.com</li>
+                    <li><strong>Endereço:</strong> R. Jose de Oliveira Ramos 188, Jardim dos Ipês<br> Itaú de Minas, MG</li>
                 </ul>
+                <div class="social-links">
+                    <a href="https://wa.me/5535991400647" target="_blank" class="social-icon">
+                        <img src="imagens/wpp.png" alt="Whatsapp">
+                    </a>
+                    <a href="https://www.instagram.com/transportes_rodoviarios_itau/" target="_blank" class="social-icon">
+                        <img src="imagens/insta.png" alt="Instagram">
+                    </a>
+                    <a href="mailto:transportesrodoviariositau17@gmail.com" class="social-icon">
+                        <img src="imagens/email.png" alt="Email">
+                    </a>                    
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=R.%20Jose%20de%20Oliveira%20Ramos%20188,%20Jardim%20dos%20Ipês,%20Itau%20de%20Minas,%20MG" target="_blank" class="social-icon">
+                        <img src="imagens/maps.png" alt="Google Maps">
+                    </a>
+                    
+                </div>
             </div>
     
-            <form class="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Seu Nome" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Seu Email" required>
-                </div>
-                <div class="form-group">
-                    <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
-                </div>
-                <button type="submit">Enviar Mensagem</button>
-            </form>
+             <!-- Formulário de Contato -->
+    <form id="contact-form" action="https://formsubmit.co/kevin.camargotecinfo@gmail.com" method="POST" class="contact-form" onsubmit="enviarMensagem(event)">
+        <div class="form-group">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
         </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Seu Email" required>
+        </div>
+        <div class="form-group">
+            <textarea name="mensagem" placeholder="Sua Mensagem" rows="5" required></textarea>
+        </div>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://kevinarcamargo.github.io/TesteSites#contact">
+
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+
+    <!-- Custom Alert de Agradecimento -->
+    <div id="custom-alert" class="custom-alert">
+        <div class="alert-title">Obrigado pela sua mensagem!</div>
+        <div>Entraremos em contato o mais breve possível.</div>
+        <button onclick="fecharAlert()">Fechar</button>
+    </div>
+
     </section>
     
-
+    
+    <!-- Rodapé -->
     <footer>
         <div class="footer-content">
             <div class="footer-links">
+                <a href="#home">Início</a>
                 <a href="#about">Sobre Nós</a>
                 <a href="#services">Serviços</a>
                 <a href="#contact">Contato</a>
-                <a href="#privacy">Política de Privacidade</a>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 Transportadora XYZ. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Desenvolvido por RPM Marketing.</p>
             </div>
         </div>
     </footer>

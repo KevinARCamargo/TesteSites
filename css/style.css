@@ -1,7 +1,8 @@
 /* Cores
 Laranja: #F05A25
-/* Reset básico */
-/* Reset básico */
+Branco: #f9f9f9
+Preto: #333
+/* Configurações Padrão */
 * {
     margin: 0;
     padding: 0;
@@ -10,13 +11,12 @@ Laranja: #F05A25
 
 body {
     font-family: 'Roboto', sans-serif; 
-    background-color: #f4f4f4;          
+    background-color: #f9f9f9;          
 }
 
 /* Cabeçalho */
 header {
     background-color: rgba(240, 90, 37, 0.9); 
-    color: #fff;
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
@@ -25,14 +25,12 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Navegação */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* Links da Navegação */
 .nav-links {
     list-style: none;
     display: flex;
@@ -44,14 +42,15 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: #fff;
+    color: #f9f9f9;
     font-size: 1rem;
+    font-weight: 500;
     transition: color 0.3s, border-bottom 0.3s;
     padding-bottom: 5px;
 }
 
 .nav-links a:hover {
-    color: black;
+    color: #333;
 }
 
 /* Logo */
@@ -61,12 +60,11 @@ nav {
     left: 50%;
     transform: translateX(-50%);
     z-index: 1001;     
-    
 }
 
 .logo {
-    height: 100px;      /* Ajuste o tamanho conforme necessário */
-    transition: height 0.3s ease; /* Transição suave ao alterar o tamanho */
+    height: 7vw;      
+    transition: height 0.3s ease; 
     border-radius: 50%; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
@@ -79,14 +77,14 @@ nav {
     justify-content: space-between;
     height: 100vh;
     padding: 2rem;
-    background: linear-gradient(135deg, #f0f0f0 50%, #f05a25 50%);
+    background: linear-gradient(135deg, #f9f9f9 50%, #f05a25 50%);
     position: relative;
     overflow: hidden;
 }
 
 .hero-content {
     max-width: 45%;
-    color: black;
+    color: #333;
     padding: 2rem;
     border-radius: 10px;
     position: relative;
@@ -108,7 +106,7 @@ nav {
     display: inline-flex;
     align-items: center;
     background-color: #f05a25;
-    color: #fff;
+    color: #f9f9f9;
     padding: 1rem 2rem;
     border-radius: 5px;
     text-decoration: none;
@@ -118,37 +116,218 @@ nav {
     transition: transform 0.3s ease;
 }
 
-
-.btn:hover {
-    background-color: #f0f0f0;
-}
-
-
-
 .btn:hover {
     background-color: #d94a1f;
 }
 
-.btn:hover i {
-    transform: translateX(5px);
+/* Carrousel  Home */
+.carousel {
+    position: relative;
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    
+  }
+
+  .carousel-container {
+    position: relative;
+  }
+
+  .carousel-image {
+    width: 42vw;
+    height: 29vw;
+    display: none;
+    border-radius: 10px;
+  }
+
+  .carousel-image.active {
+    display: block;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: #f9f9f9;
+    font-size: 1.5rem;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+  }
+
+  .carousel-control:hover {
+    opacity: 1;
+  }
+
+  .carousel-control.prev {
+    left: 10px;
+  }
+
+  .carousel-control.next {
+    right: 10px;
+  }
+
+/* Seções Gerais */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
-/* Imagem */
-.hero-image {
-    flex: 1;
+/* Seção Sobre Nós */
+.about-us {
+    padding: 5rem 2rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.about-container {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
     position: relative;
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 650px;
-    height: auto;
+.about-content h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #f05a25;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Carrousel  About*/
+.about-carousel {
+    position: relative;
+    margin: auto;
     border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1.5s ease-in-out;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-carousel-container {
+    position: relative;
+}
+
+.about-carousel-image {
+    width: 35vw;
+    height: 25vw;
+    display: none;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-carousel-image.active {
+    display: block;
+}
+
+.about-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: #f9f9f9;
+    font-size: 1.5rem;
+    width: 40px; 
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.about-carousel-control:hover {
+    opacity: 1;
+}
+
+.about-carousel-control.prev {
+    left: 10px; 
+}
+
+.about-carousel-control.next {
+    right: 10px; 
+}
+
+.btn-about {
+    display: inline-block;
+    background-color: #f05a25;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-about:hover {
+    background-color: #d94a1f;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
 }
 
 /* Seção de Estatísticas */
@@ -156,10 +335,9 @@ nav {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 3rem 2rem;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .stat {
@@ -167,7 +345,7 @@ nav {
     color: #fff;
     padding: 2rem;
     border-radius: 10px;
-    width: 180px;
+    width: 12vw;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     animation: fadeInUp 1s ease-out;
 }
@@ -238,9 +416,9 @@ nav {
 
 /* Seção Valores */
 .values {
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 0rem 2rem;
     text-align: center;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
 }
 
 .value-cards {
@@ -255,7 +433,7 @@ nav {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px;
+    width: 14vw;
     transition: transform 0.3s ease;
 }
 
@@ -268,105 +446,6 @@ nav {
     color: #F05A25;
 }
 
-
-/* Seções Gerais */
-section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-/* Seção Sobre Nós */
-.about-us {
-    padding: 5rem 2rem;
-    background-color: #f9f9f9;
-}
-
-.about-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 2rem;
-}
-
-.about-image {
-    flex: 1;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.about-image img:hover {
-    transform: scale(1.05);
-}
-
-.about-content {
-    flex: 1;
-    max-width: 500px;
-}
-
-.about-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-    position: relative;
-}
-
-.about-content h2::after {
-    content: '';
-    width: 60px;
-    height: 4px;
-    background-color: #f05a25;
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-}
-
-.about-content p {
-    font-size: 1.1rem;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.btn-about {
-    display: inline-block;
-    background-color: #f05a25;
-    color: #fff;
-    padding: 0.8rem 2rem;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.btn-about:hover {
-    background-color: #d94a1f;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-content h2::after {
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .about-image img {
-        max-width: 100%;
-    }
-}
-
 /* Sobre Nós e Contato */
 .about, .contact {
     background-color: #f4f4f4;
@@ -375,8 +454,8 @@ section {
 /* Seção de Serviços */
 .services {
     padding: 2rem;
-    height: 100vh; /* Ocupa 100% da altura da tela */
-    background-color: #fff;
+    margin-top: 10vw;
+    background-color: #f9f9f9;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -385,7 +464,7 @@ section {
 
 .services-header {
     max-width: 700px;
-    margin: 0 auto 2rem;
+    margin: 0vw auto 2rem;
 }
 
 .services-header h2 {
@@ -396,6 +475,9 @@ section {
     display: inline-block;
 }
 
+#espacamento{
+    margin-top: 5vw;
+}
 .services-header h2::after {
     content: '';
     width: 60px;
@@ -416,8 +498,8 @@ section {
 }
 
 .service-card {
-    background-color: #f9f9f9;
-    padding: 2rem;
+    background-color: #fff;
+    padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -445,6 +527,27 @@ section {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Imagem Central */
+.services-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto; /* Centraliza na vertical */
+    padding: 1rem;
+    max-width: 25vw; /* Define um limite de largura */
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.services-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     .about-content {
@@ -463,7 +566,7 @@ section {
 /* Seção de Contato */
 .contact {
     height: 100vh; /* Ocupa 100% da altura da tela */
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -570,7 +673,65 @@ section {
     }
 }
 
+/* Links de redes sociais */
+.social-links {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
 
+.social-icon img {
+    width: 20px; 
+    height: 20px;
+    cursor: pointer;
+}
+
+.social-icon img:hover {
+    transform: scale(1.1); /* Amplia levemente no hover */
+}
+
+/* Estilo do Custom Alert */
+.custom-alert {
+    position: fixed;
+    top: 0vw;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    z-index: 9999;
+}
+
+.custom-alert .alert-title {
+    margin-bottom: 10px;
+}
+
+.custom-alert button {
+    background-color: #ff6f00;
+    margin-top: 1vw;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-alert button:hover {
+    background-color: #e65b00;
+}
 
 /* Rodapé */
 footer {
@@ -612,7 +773,8 @@ footer {
     color: #aaa;
 }
 
-/* Personalização da Barra de Rolagem para WebKit (Chrome, Safari, Edge) */
+
+/* Barra de Rolagem  */
 
 /* Largura da barra de rolagem */
 ::-webkit-scrollbar {
