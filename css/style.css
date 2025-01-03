@@ -167,10 +167,11 @@ nav {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
     border: none;
-    color: #f9f9f9;
+    color: #333;
     font-size: 1.5rem;
+    font-weight: 600;
     width: 30px;
     height: 30px;
     cursor: pointer;
@@ -288,12 +289,13 @@ section {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
     border: none;
-    color: #f9f9f9;
+    color: #333;
     font-size: 1.5rem;
-    width: 40px; 
-    height: 40px;
+    font-weight: 600;
+    width: 30px; 
+    height: 30px;
     cursor: pointer;
     border-radius: 50%;
     display: flex;
@@ -302,6 +304,7 @@ section {
     opacity: 0.8;
     transition: opacity 0.3s ease;
     z-index: 10;
+
 }
 
 .about-carousel-control:hover {
@@ -471,31 +474,24 @@ section {
 
 /* Seção de Serviços */
 .services {
-    padding: 2rem;
-    margin-top: 10vw;
+    padding: 4rem 2rem;
     background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
 }
 
 .services-header {
-
-    margin: 0vw auto 2rem;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
 }
 
 .services-header h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #333;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     position: relative;
     display: inline-block;
 }
 
-#espacamento{
-    margin-top: 5vw;
-}
 .services-header h2::after {
     content: '';
     width: 60px;
@@ -507,79 +503,82 @@ section {
     transform: translateX(-50%);
 }
 
-.services-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.service-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.service-card img {
-    width: 80px;
+.services-header p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
 }
 
-.service-card h3 {
+.services-content {
+    display: flex;
+    flex-direction: row;
+    gap: 7rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.services-text {
+    flex: 1;
+    text-align: left;
+}
+
+.services-text h3 {
     font-size: 1.5rem;
-    color: #333;
+    color: #f05a25;
     margin-bottom: 1rem;
 }
 
-.service-card p {
+.services-text p {
+    text-align: justify;
+    font-size: 1.1rem;
     color: #555;
     line-height: 1.6;
+    margin-bottom: 0.75rem;
+    
 }
 
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+.services-text p strong {
+    color: #333;
+    font-weight: bold;
 }
 
-/* Imagem Central */
 .services-image {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem auto; /* Centraliza na vertical */
-    padding: 1rem;
-    max-width: 25vw; /* Define um limite de largura */
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .services-image img {
     width: 100%;
+    max-width: 500px;
     height: auto;
     border-radius: 10px;
-    object-fit: cover;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .about-content {
+    .services-content {
         flex-direction: column;
+        text-align: center;
     }
 
-    .about img, .about-text {
+    .services-text {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .services-image img {
         max-width: 100%;
     }
-
-    .services-container {
-        grid-template-columns: 1fr;
-    }
 }
+
+
+
 
 /* Seção de Contato */
 .contact {
