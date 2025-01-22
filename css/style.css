@@ -402,28 +402,7 @@ section {
     }
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        padding: 1rem;
-        height: auto;
-    }
 
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 2rem;
-    }
-
-    .hero-image img {
-        max-width: 100%;
-    }
-
-    .stats {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-}
 
 /* Seção Valores */
 .values {
@@ -816,12 +795,40 @@ footer {
 /* Ocultar logo no mobile */
 @media (max-width: 430px) {
 
+    .hero {
+        flex-direction: column;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    section{
+        height: 100vh;
+    }
     .logo-container {
         display: none;
     }
 
     .wpp-icon{
         display: none;
+    }
+
+    header{
+        background-color: rgba(240, 90, 37); 
+        padding: 0.8vh;
     }
 
     .nav-links {
@@ -895,17 +902,21 @@ footer {
     .carousel{
         width: 85%;
     }
-    
+
     .carousel-image {
         width: 100%;
         height: 28vh;
     }
-    
+
+    .about-us{
+        height: 100vh;
+    }
+
     .about-container {
-        flex-direction: column; /* Empilhar os elementos */
-        gap: 1rem;
-        width: 100%; /* Ajustar à largura da tela */
-        padding: 0 1rem; /* Adicionar espaçamento lateral */
+        flex-direction: column; 
+        gap: 4rem;
+        width: 100%; 
+        padding: 0 1rem; 
     }
     
     .about-carousel {
@@ -914,8 +925,8 @@ footer {
     }
     
     .about-carousel-image {
-        width: 100%; /* Ajustar imagens para largura total */
-        height: auto; /* Manter proporção */
+        width: 100%; 
+        height: 28vh; 
     }
     
     .about-content {
@@ -924,6 +935,17 @@ footer {
     
     .about-content h2 {
         font-size: 2rem; /* Reduzir tamanho do título */
+    }
+    
+    .about-content h2::after {
+        content: '';
+        width: 60px;
+        height: 4px;
+        background-color: #f05a25;
+        position: auto;
+        bottom: -0.5rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
     
     .about-content p {
@@ -940,6 +962,25 @@ footer {
         height: 40px;
         font-size: 1.2rem;
     }
+
+    .stats {
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .stat {
+        width: 60vw; /* Ajusta a largura para 80% da tela em dispositivos móveis */
+        height: 20vh;
+    }
+
+    .stat h3 {
+        font-size: 2.5rem;
+    }
+
+    .stat p {
+        font-size: 1.5rem;
+    }
+
 }
 
 
