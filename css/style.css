@@ -812,7 +812,7 @@ footer {
 }
 
 /* Ocultar logo no mobile */
-@media (max-width: 768px) {
+@media (max-width: 430px) {
     .logo-container {
         display: none;
     }
@@ -857,9 +857,50 @@ footer {
         margin: 0.3rem 0;
         transition: all 0.3s ease;
     }
+
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .about-container {
+        flex-direction: column; /* Empilhar os elementos */
+        gap: 1rem;
+        width: 100%; /* Ajustar à largura da tela */
+        padding: 0 1rem; /* Adicionar espaçamento lateral */
+    }
+    
+    .about-carousel {
+        margin: 0 auto;
+        width: 100%; /* Usar a largura total */
+    }
+    
+    .about-carousel-image {
+        width: 100%; /* Ajustar imagens para largura total */
+        height: auto; /* Manter proporção */
+    }
+    
+    .about-content {
+        text-align: center; /* Centralizar texto */
+    }
+    
+    .about-content h2 {
+        font-size: 2rem; /* Reduzir tamanho do título */
+    }
+    
+    .about-content p {
+        font-size: 1rem; /* Ajustar tamanho da fonte */
+    }
+    
+    .btn-about {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem; /* Ajustar botão */
+    }
+    
+    .about-carousel-control {
+        width: 40px; /* Aumentar controles */
+        height: 40px;
+        font-size: 1.2rem;
+    }
 }
 
-/* Mostrar menu ao ativar */
-.nav-links.active {
-    display: flex;
-}
+
