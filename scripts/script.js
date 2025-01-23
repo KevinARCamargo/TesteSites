@@ -114,3 +114,33 @@ const navLinks = document.querySelector('.nav-links');
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+
+
+//Carrousel Valores
+const leftBtnValores = document.querySelector('.carousel-valores-btn.left-btn');
+const rightBtnValores = document.querySelector('.carousel-valores-btn.right-btn');
+const groups = document.querySelectorAll('.carousel-valores-group');
+let currentIndex = 0;
+
+// Exibe o grupo correto
+function showGroup(index) {
+    groups.forEach((group, i) => {
+        group.style.display = (i === index) ? 'block' : 'none';
+    });
+}
+
+// Inicializa o carrossel mostrando o primeiro grupo
+showGroup(currentIndex);
+
+// Navega para o próximo grupo (cíclico)
+rightBtnValores.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % groups.length;
+    showGroup(currentIndex);
+});
+
+// Navega para o grupo anterior (cíclico)
+leftBtnValores.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + groups.length) % groups.length;
+    showGroup(currentIndex);
+});
+
