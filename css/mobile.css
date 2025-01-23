@@ -21,9 +21,6 @@
         gap: 1.5rem;
     }
 
-    section{
-        height: 100vh;
-    }
     .logo-container {
         display: none;
     }
