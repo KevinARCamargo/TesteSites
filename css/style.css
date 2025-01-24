@@ -134,7 +134,6 @@ nav {
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s ease;
     margin-left: 0.5rem;
     transition: transform 0.3s ease;
 }
@@ -309,7 +308,6 @@ section {
     opacity: 0.8;
     transition: opacity 0.3s ease;
     z-index: 10;
-
 }
 
 .about-carousel-control:hover {
@@ -332,7 +330,6 @@ section {
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s ease;
 }
 
 .btn-about:hover {

@@ -50,21 +50,21 @@
     }
     
     .nav-links li:hover {
-        background-color: #F05A25; /* Fundo laranja ao passar o mouse */
-        transform: scale(1.05); /* Leve aumento para destaque */
-        border-radius: 5px; /* Cantos arredondados para um visual mais suave */
+        background-color: #F05A25; 
+        transform: scale(1.05); 
+        border-radius: 5px; 
     }
     
     .nav-links a {
-        color: #F05A25; /* Cor laranja principal */
-        font-size: 1.1rem; /* Tamanho ligeiramente maior para melhor leitura */
-        font-weight: 600; /* Um pouco mais forte para destacar o texto */
-        text-decoration: none; /* Remove o sublinhado */
-        transition: color 0.3s ease; /* Suaviza a mudança de cor */
+        color: #F05A25; 
+        font-size: 1.1rem; 
+        font-weight: 600; 
+        text-decoration: none; 
+        transition: color 0.3s ease; 
     }
     
     .nav-links a:hover {
-        color: #ffffff; /* Texto branco ao passar o mouse */
+        color: #ffffff; 
     }
 
     
@@ -203,6 +203,14 @@
     }
 
     /* Valores */ 
+    .values{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .carousel-valores-container{
+        width: 100%;
+    }
+
     .value-cards {
         display: none;
     }
@@ -257,14 +265,15 @@
         cursor: pointer;
         border-radius: 50%;
         z-index: 10;
+        font-weight: bolder;
     }
     
     .carousel-valores-btn.left-btn {
-        left: 1px;
+        left: 15px;
     }
     
     .carousel-valores-btn.right-btn {
-        right: 1px;
+        right: 15px;
     }
 
     /*Serviços*/
@@ -334,7 +343,7 @@
     }
 
     .contact-info li {
-        font-size: 1rem;
+        font-size: 0.95rem;
         color: #555;
         margin-bottom: 0.75rem;
     }
