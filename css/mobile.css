@@ -67,6 +67,9 @@
         color: #ffffff; 
     }
 
+    .whatsapp-float {
+        display: flex; 
+    }
     
     /* Hero */
     .hero {
