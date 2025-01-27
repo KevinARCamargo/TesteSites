@@ -281,6 +281,10 @@
         right: 15px;
     }
 
+    .value-up{
+        margin-bottom: 1px;
+    }
+
     /*Serviços*/
     .servicos-desktop{
         display: none;
@@ -348,7 +352,7 @@
     }
 
     .contact-info li {
-        font-size: 0.95rem;
+        font-size: 1rem;
         color: #555;
         margin-bottom: 0.75rem;
     }
@@ -359,6 +363,11 @@
 
     .contact-form{
         display: none;
+    }
+
+    .strong-mobile{
+        display: block;
+        margin-bottom: 2px;
     }
 
 
