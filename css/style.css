@@ -12,10 +12,6 @@ body {
     color: #333;
 }
 
-section{ 
-    height: 100vh;
-}
-
 .logo {
     position: absolute;
     margin-top: 0.5rem;
