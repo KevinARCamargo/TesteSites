@@ -1,0 +1,550 @@
+/* Configuração Geral */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+section{ 
+    height: 100vh;
+}
+
+.logo {
+    position: absolute;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+    width: 70px; 
+    height: auto;
+}
+
+header {
+    background: linear-gradient(135deg, white 50%, #214D92 50%);
+    position: fixed;
+    margin-top: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding: 1rem 3rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.whatsapp-button-img{
+    padding-left: 5px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+
+
+/* Home */
+#home {
+    height: 100vh;
+    
+}
+
+
+
+
+
+
+/* Seção Sobre Nós */
+.about-text{
+    color: #214D92;
+}
+
+.about-us {
+    padding: 5rem 5rem 2rem 0rem;
+    text-align: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    gap: 5rem; /* Espaço entre o texto e o carousel */
+    max-width: 1200px; /* Define uma largura máxima para o container */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 1rem; /* Adiciona um padding para evitar que o conteúdo encoste nas bordas */
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-content {
+    flex: 1;
+    max-width: 500px; /* Define uma largura máxima para o texto */
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    position: relative;
+}
+
+.about-content h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #214D92;
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Carrousel  About*/
+.about-carousel {
+    position: relative;
+    width: 100%; /* Ocupa 100% da largura do container */
+    max-width: 500px; /* Define uma largura máxima para o carousel */
+    margin: 0 auto; /* Centraliza o carousel */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-carousel-container {
+    position: relative;
+}
+
+.about-carousel-image {
+    width: 500px;
+    height: 28vw;
+    display: none;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.about-carousel-image.active {
+    display: block;
+}
+
+.about-carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #f9f9f9;
+    border: none;
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 30px; 
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+.about-carousel-control:hover {
+    opacity: 1;
+}
+
+.about-carousel-control.prev {
+    left: 10px; 
+}
+
+.about-carousel-control.next {
+    right: 10px; 
+}
+
+.btn-about {
+    display: inline-block;
+    background-color: #214D92;
+    color: #fff;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-about:hover {
+    background-color: #007BFF;
+}
+
+
+
+
+/* Seção de serviços */
+.services, .clients {
+    text-align: center;
+    padding: 80px 20px;
+    background: #f9fafc;
+}
+
+.services h2, .clients h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #1a365d;
+    position: relative;
+    font-weight: 600;
+}
+
+.services h2::after, .clients h2::after {
+    content: '';
+    width: 120px;
+    height: 4px;
+    background-color: #214D92;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.services p, .clients p {
+    font-size: 1.1rem;
+    color: #4a5568;
+    line-height: 1.75;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+/* Container de Serviços */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cards de Serviços */
+.service-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #214D92;
+}
+
+.service-card h3 {
+    font-size: 1.25rem;
+    margin: 20px 0 15px;
+    color: #1a365d;
+    font-weight: 600;
+    padding: 0 15px;
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    background-color: #214D92;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1a365d;
+}
+
+/* Carrossel de Clientes */
+.clients{
+    margin-top: 80vh;
+}
+
+
+.clienteCarousel {
+    position: relative;
+    margin: auto;
+    width: 80%;
+    overflow: hidden;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.clienteTrack {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 2%; /* Espaço entre os slides */
+}
+
+.clienteSlide {
+    flex: 0 0 32%; /* (100% - 4% de gap) / 3 = 32% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px; /* Altura mínima para vertical */
+}
+
+.clienteSlide img {
+    width: 150px; /* Tamanho fixo horizontal */
+    height: 70px; /* Tamanho fixo vertical */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
+
+.clienteButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #214D92;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+}
+
+.clienteButton:hover {
+    background: #1a365d;
+}
+
+.clienteButton.prev { left: 20px; }
+.clienteButton.next { right: 20px; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .clienteTrack {
+        gap: 20px;
+        padding: 0 40px;
+    }
+    
+    .clienteSlide {
+        flex: 0 0 140px;
+    }
+}
+
+
+
+
+
+/*Contato */
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.contact-content {
+    width: 80%;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info h2 {
+    font-size: 2.5rem;
+    color: #214D92;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.contact-info ul strong{
+    color:#214D92;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.social-links {
+    margin-top: 1.1rem;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links img {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+/*Rodapé*/
+footer {
+    background-color: #214D92;
+    color: white;
+    padding: 1rem 2rem 0.2rem; 
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-links {
+    display: flex;
+    gap: 1rem; 
+    justify-content: center;
+}
+
+.footer-links a {
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #5387EC; 
+}
+
+.footer-bottom {
+    margin-top: 0.5rem; 
+    font-size: 0.8rem; 
+    color: white;
+}
+
+
+
+
+
+/* Barra de Rolagem  */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color:white; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #214D92; 
+}
+
