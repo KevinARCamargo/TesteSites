@@ -366,8 +366,8 @@ nav ul li a:hover {
 }
 
 .clienteSlide img {
-    width: 150px; /* Tamanho fixo horizontal */
-    height: 70px; /* Tamanho fixo vertical */
+    width: 300px; /* Tamanho fixo horizontal */
+    height: 140px; /* Tamanho fixo vertical */
     object-fit: contain; /* Mantém a proporção da imagem */
 }
 
@@ -431,6 +431,8 @@ nav ul li a:hover {
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 20vh;
+    margin-bottom: 20vh;
 }
 
 .contact-info {
@@ -496,7 +498,7 @@ nav ul li a:hover {
 footer {
     background-color: #214D92;
     color: white;
-    padding: 1rem 2rem 0.2rem; 
+    padding: 0.5rem 2rem 1rem; 
     text-align: center;
     font-size: 0.9rem;
 }
