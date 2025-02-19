@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, white 50%, #214D92 50%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 50%, #214D92 50%);
     position: fixed;
     margin-top: 0px;
     width: 100%;
@@ -92,6 +92,17 @@ nav ul li a:hover {
     
 }
 
+.banner {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100vh;
+    display: block;
+}
 
 
 
@@ -269,7 +280,7 @@ nav ul li a:hover {
     font-size: 1.1rem;
     color: #4a5568;
     line-height: 1.75;
-    max-width: 800px;
+    max-width: 1250px;
     margin: 2rem auto;
 }
 
@@ -330,11 +341,6 @@ nav ul li a:hover {
 }
 
 /* Carrossel de Clientes */
-.clients{
-    margin-top: 80vh;
-}
-
-
 .clienteCarousel {
     position: relative;
     margin: auto;
@@ -457,7 +463,6 @@ nav ul li a:hover {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     color: #555;
-    font-weight: 500;
 }
 
 .social-links {
