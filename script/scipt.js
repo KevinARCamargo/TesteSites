@@ -111,3 +111,36 @@ document.addEventListener("DOMContentLoaded", () => {
     // Autoplay opcional (descomente se quiser)
     // setInterval(handleNext, 3000);
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+    const sections = document.querySelectorAll("section");
+
+    function updateHeaderColor() {
+        let isBlueBackground = true;
+
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const inView = rect.top <= 100 && rect.bottom >= 100; // Verifica se está na área visível
+
+            if (inView) {
+                // Verifica se a seção tem fundo azul
+                const bgColor = window.getComputedStyle(section).backgroundColor;
+                if (bgColor === "rgb(33, 77, 146)") { // Azul (#214D92 em RGB)
+                    isBlueBackground = false;
+                }
+            }
+        });
+
+        if (isBlueBackground) {
+            header.classList.remove("header-white");
+            header.classList.add("header-blue");
+        } else {
+            header.classList.remove("header-blue");
+            header.classList.add("header-white");
+        }
+    }
+
+    window.addEventListener("scroll", updateHeaderColor);
+    updateHeaderColor(); // Chama ao carregar a página
+});

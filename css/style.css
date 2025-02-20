@@ -1,4 +1,6 @@
 /* Configuração Geral */
+/*Azul: #214D92
+Branco: */
 
 * {
     margin: 0;
@@ -8,7 +10,6 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white;
     color: #333;
 }
 
@@ -21,11 +22,41 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 50%, #214D92 50%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 85%, #214D92 50%);
     position: fixed;
     margin-top: 0px;
     width: 100%;
     z-index: 1000;
+}
+
+header {
+    transition: background 1s ease, color 1 ease;
+}
+
+.header-white {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 65%, white 50%);
+    color: white;
+}
+
+.header-blue {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 65%, #214D92 50%);
+    color: white;
+}
+
+.header-blue nav ul li a {
+    color: white;  /* Links brancos no fundo azul */
+}
+
+.header-white nav ul li a {
+    color: #214D92; /* Links azuis no fundo branco */
+}
+
+.header-white nav ul li a:hover {
+    color: #5387EC; /* Efeito de hover no fundo branco */
+}
+
+.header-blue nav ul li a:hover {
+    color: #5387EC; /* Efeito de hover no fundo azul */
 }
 
 nav {
@@ -61,7 +92,7 @@ nav ul li a:hover {
 
 .whatsapp-button {
     position: fixed;
-    bottom: 20px;
+    bottom: 30px;
     right: 20px;
     background-color: #25D366;
     color: white;
@@ -114,8 +145,10 @@ nav ul li a:hover {
 }
 
 .about-us {
-    padding: 5rem 5rem 2rem 0rem;
+    height: 100vh;
+    padding: 10rem 5rem 2rem 0rem;
     text-align: center;
+    background: #f9fafc;
 }
 
 .about-container {
@@ -250,25 +283,25 @@ nav ul li a:hover {
 
 
 /* Seção de serviços */
-.services, .clients {
+.services{
     text-align: center;
     padding: 80px 20px;
-    background: #f9fafc;
+    background: #214D92;
 }
 
-.services h2, .clients h2 {
+.services h2{
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #1a365d;
+    color: white;
     position: relative;
     font-weight: 600;
 }
 
-.services h2::after, .clients h2::after {
+.services h2::after{
     content: '';
     width: 120px;
     height: 4px;
-    background-color: #214D92;
+    background-color: white;
     position: absolute;
     bottom: -1rem;
     left: 50%;
@@ -276,9 +309,9 @@ nav ul li a:hover {
     border-radius: 2px;
 }
 
-.services p, .clients p {
+.services p {
     font-size: 1.1rem;
-    color: #4a5568;
+    color: white;
     line-height: 1.75;
     max-width: 1250px;
     margin: 2rem auto;
@@ -298,7 +331,7 @@ nav ul li a:hover {
 .service-card {
     background: white;
     border-radius: 16px;
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 30px rgba(150, 150, 150, 0.3); /* Cinza claro translúcido */
     overflow: hidden;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -341,6 +374,41 @@ nav ul li a:hover {
 }
 
 /* Carrossel de Clientes */
+.clients {
+    text-align: center;
+    padding: 10vh 20px; /* Reduzi o padding para melhor visualização */
+    background: #f9f9f9;
+    min-height: 100vh; /* Alterei para min-height */
+}
+
+.clients h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #214D92;
+    position: relative;
+    font-weight: 600;
+}
+
+.clients h2::after {
+    content: '';
+    width: 120px;
+    height: 4px;
+    background-color: #214D92;
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.clients p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.75;
+    max-width: 1250px;
+    margin: 2rem auto;
+}
+
 .clienteCarousel {
     position: relative;
     margin: auto;
@@ -349,6 +417,7 @@ nav ul li a:hover {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 6vh;
 }
 
 .clienteTrack {
@@ -358,7 +427,7 @@ nav ul li a:hover {
 }
 
 .clienteSlide {
-    flex: 0 0 32%; /* (100% - 4% de gap) / 3 = 32% */
+    flex: 0 0 33.3%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -366,8 +435,10 @@ nav ul li a:hover {
 }
 
 .clienteSlide img {
+    
+    
     width: 300px; /* Tamanho fixo horizontal */
-    height: 140px; /* Tamanho fixo vertical */
+    height: 180px; /* Tamanho fixo vertical */
     object-fit: contain; /* Mantém a proporção da imagem */
 }
 
@@ -421,18 +492,20 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+    background-color: #214D92;
+    height: 90vh;
 }
 
 .contact-content {
     width: 80%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 20vh;
-    margin-bottom: 20vh;
 }
 
 .contact-info {
@@ -496,11 +569,12 @@ nav ul li a:hover {
 
 /*Rodapé*/
 footer {
-    background-color: #214D92;
-    color: white;
-    padding: 0.5rem 2rem 1rem; 
+    background-color: #fff;
+    color: #214D92;
+    padding: 0.8rem 2rem 0.5rem; 
     text-align: center;
     font-size: 0.9rem;
+    height: 10vh;
 }
 
 .footer-content {
@@ -518,7 +592,7 @@ footer {
 }
 
 .footer-links a {
-    color: white; 
+    color: #214D92; 
     text-decoration: none;
     transition: color 0.3s;
     font-size: 0.9rem;
@@ -531,7 +605,7 @@ footer {
 .footer-bottom {
     margin-top: 0.5rem; 
     font-size: 0.8rem; 
-    color: white;
+    color: #214D92;
 }
 
 
