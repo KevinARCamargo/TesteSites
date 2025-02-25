@@ -49,67 +49,29 @@ document.addEventListener("DOMContentLoaded", () => {
   
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    const clienteTrack = document.querySelector(".clienteTrack");
-    const clienteSlides = document.querySelectorAll(".clienteSlide");
-    const prevButton = document.querySelector(".clienteButton.prev");
-    const nextButton = document.querySelector(".clienteButton.next");
+// Seleciona os elementos
+const slidesContainer = document.querySelector('.clientes-carousel-slides');
+const slides = document.querySelectorAll('.clientes-carousel-slide');
+const prevButton = document.querySelector('.clientes-carousel-prev');
+const nextButton = document.querySelector('.clientes-carousel-next');
+let currentIndex = 0;
+const totalSlides = slides.length;
 
-    // Clonar os primeiros 3 slides para o final para efeito infinito
-    const cloneCount = 3;
-    for (let i = 0; i < cloneCount; i++) {
-        let clone = clienteSlides[i].cloneNode(true);
-        clienteTrack.appendChild(clone);
-    }
+function updateCarousel() {
+    const slideWidth = 33.33333; // Percentual correspondente a cada slide
+    slidesContainer.style.transform = `translateX(-${currentIndex * slideWidth}%)`;
+}
 
-    let currentIndex = 0;
-    const totalSlides = clienteSlides.length; // 7 slides originais
-    const slidesToShow = 3;
+// Evento para botão "anterior"
+prevButton.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+  updateCarousel();
+});
 
-    function updateCarousel() {
-        const offset = -currentIndex * (100 / slidesToShow);
-        clienteTrack.style.transform = `translateX(${offset}%)`;
-    }
-
-    function handleNext() {
-        if (currentIndex >= totalSlides) {
-            // Reset suave para os slides originais
-            clienteTrack.style.transition = 'none';
-            currentIndex = 0;
-            updateCarousel();
-            setTimeout(() => {
-                clienteTrack.style.transition = 'transform 0.5s ease-in-out';
-                currentIndex++;
-                updateCarousel();
-            }, 10);
-        } else {
-            currentIndex++;
-            updateCarousel();
-        }
-    }
-
-    function handlePrev() {
-        if (currentIndex <= 0) {
-            // Reset suave para os clones finais
-            clienteTrack.style.transition = 'none';
-            currentIndex = totalSlides;
-            updateCarousel();
-            setTimeout(() => {
-                clienteTrack.style.transition = 'transform 0.5s ease-in-out';
-                currentIndex--;
-                updateCarousel();
-            }, 10);
-        } else {
-            currentIndex--;
-            updateCarousel();
-        }
-    }
-
-    nextButton.addEventListener('click', handleNext);
-    prevButton.addEventListener('click', handlePrev);
-
-    // Autoplay opcional (descomente se quiser)
-    // setInterval(handleNext, 3000);
+// Evento para botão "próximo"
+nextButton.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  updateCarousel();
 });
 
 document.addEventListener("DOMContentLoaded", function () {

@@ -409,46 +409,53 @@ nav ul li a:hover {
     margin: 2rem auto;
 }
 
-.clienteCarousel {
-    position: relative;
+.clientes-carousel-container {
+    width: 85%;
+    height: 50%;
     margin: auto;
-    width: 80%;
+    position: relative;
     overflow: hidden;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    margin-top: 6vh;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    box-sizing: border-box; /* Adicionado para incluir padding no cálculo de largura */
 }
 
-.clienteTrack {
+.clientes-carousel-slides {
     display: flex;
+    width: 300%; /* Mantém 300% para 3 slides */
     transition: transform 0.5s ease-in-out;
-    gap: 2%; /* Espaço entre os slides */
 }
 
-.clienteSlide {
-    flex: 0 0 33.3%; 
+.clientes-carousel-slide {
+    flex: 0 0 33.33333%; /* Cada slide ocupa 1/3 do container (100% / 3) */
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    min-height: 150px; /* Altura mínima para vertical */
+    padding: 0 10px; 
 }
 
-.clienteSlide img {
-    
-    
-    width: 300px; /* Tamanho fixo horizontal */
-    height: 180px; /* Tamanho fixo vertical */
-    object-fit: contain; /* Mantém a proporção da imagem */
+.clientes-carousel-slide img {
+    width: 16%; /* Reduzido para 28% para acomodar melhor */
+    height: 55%;
+    display: block;
+    transition: filter 0.3s ease;
+    background-color: red;
 }
-
-.clienteButton {
+  .clientes-carousel-slide img:hover {
+    filter: grayscale(0%);
+  }
+  /* Botões de navegação */
+  .clientes-carousel-nav-button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    border: none;
+    font-size: 24px;
+    padding: 10px;
     background: #214D92;
     color: white;
-    border: none;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -458,32 +465,16 @@ nav ul li a:hover {
     justify-content: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: background 0.3s ease;
-}
-
-.clienteButton:hover {
+  }
+  .clientes-carousel-nav-button:hover {
     background: #1a365d;
-}
-
-.clienteButton.prev { left: 20px; }
-.clienteButton.next { right: 20px; }
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .services-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .clienteTrack {
-        gap: 20px;
-        padding: 0 40px;
-    }
-    
-    .clienteSlide {
-        flex: 0 0 140px;
-    }
-}
-
-
+  }
+  .clientes-carousel-prev {
+    left: 10px;
+  }
+  .clientes-carousel-next {
+    right: 10px;
+  }
 
 
 
