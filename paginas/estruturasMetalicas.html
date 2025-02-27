@@ -1,82 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detalhes do Produto</title>
-    <link rel="stylesheet" href="../css/paginas.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" href="../css/paginas.css">
 </head>
 <body>
-    <main class="product-container">
-        <!-- Galeria de Imagens -->
-        <div class="product-gallery">
-            <!-- Imagem Principal -->
-            <div class="main-image">
-                <img src="imagens/produto-principal.jpg" alt="Estrutura Metálica Industrial" id="mainImage">
-            </div>
-            
-            <!-- Thumbnails -->
-            <div class="thumbnails">
-                <div class="thumbnail active" onclick="changeImage('imagens/produto-principal.jpg')">
-                    <img src="../imagens/estruturasMetalicas.jpg" alt="Vista frontal">
-                </div>
-                <div class="thumbnail" onclick="changeImage('imagens/produto-thumb2.jpg')">
-                    <img src="../imagens/estrutura1.jpg" alt="Detalhes estrutura">
-                </div>
-                <div class="thumbnail" onclick="changeImage('imagens/produto-thumb3.jpg')">
-                    <img src="../imagens/estrutura2.jpg" alt="Instalação">
-                </div>
-            </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">Sobre</a></li>
+        <li><a href="../index.html#services">Serviços</a></li>
+        <li><a href="../index.html#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main class="product-container">
+    <!-- Lado Esquerdo: Galeria de Imagens -->
+    <div class="product-gallery">
+      <!-- Imagem Principal -->
+      <div class="main-image">
+        <img src="../imagens/estruturasMetalicas.jpg" alt="Estrutura Metálica Industrial" id="mainImage">
+      </div>
+      <!-- Thumbnails -->
+      <div class="thumbnails">
+        <div class="thumbnail active" onclick="changeImage('imagens/produto-principal.jpg', this)">
+          <img src="../imagens/estruturasMetalicas.jpg" alt="Vista frontal">
         </div>
-
-        <!-- Detalhes do Produto -->
-        <div class="product-details">
-            <h1>Estruturas Metálicas Industriais</h1>
-            <div class="product-meta">
-                <span class="product-category">Engenharia Metalúrgica</span>
-            </div>
-            
-            <div class="product-description">
-                <p>Soluções completas em estruturas metálicas para empreendimentos industriais e comerciais de grande porte.</p>
-                
-                <h2>Características Técnicas</h2>
-                <ul class="features-list">
-                    <li>✅ Material: Aço ASTM A572</li>
-                    <li>✅ Tratamento anticorrosivo</li>
-                    <li>✅ Garantia de 10 anos</li>
-                    <li>✅ Resistência a intempéries</li>
-                </ul>
-
-                <h2>Especificações</h2>
-                <div class="specs-grid">
-                    <div class="spec-item">
-                        <span class="spec-title">Carga Máxima</span>
-                        <span class="spec-value">150 ton/m²</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-title">Dimensões</span>
-                        <span class="spec-value">Sob medida</span>
-                    </div>
-                    <div class="spec-item">
-                        <span class="spec-title">Certificações</span>
-                        <span class="spec-value">ISO 9001</span>
-                    </div>
-                </div>
-            </div>
-
-            <a href="servicos.html" class="btn back-button">← Voltar aos Serviços</a>
+        <div class="thumbnail" onclick="changeImage('imagens/produto-thumb2.jpg', this)">
+          <img src="../imagens/estrutura1.jpg" alt="Detalhes da estrutura">
         </div>
-
-        <!-- Lightbox -->
-        <div class="lightbox" id="imageLightbox">
-            <span class="close-btn" onclick="closeLightbox()">&times;</span>
-            <img class="lightbox-content" id="lightboxImage">
-            <div class="lightbox-nav">
-                <button class="nav-btn prev-btn" onclick="navigate(-1)">&#10094;</button>
-                <button class="nav-btn next-btn" onclick="navigate(1)">&#10095;</button>
-            </div>
+        <div class="thumbnail" onclick="changeImage('imagens/produto-thumb3.jpg', this)">
+          <img src="../imagens/estrutura2.jpg" alt="Instalação">
         </div>
-    </main>
+      </div>
+    </div>
+
+    <!-- Lado Direito: Detalhes do Produto -->
+    <div class="product-details">
+      <h1>Estruturas Metálicas Industriais</h1>
+      <div class="product-description">
+        <p>Soluções completas em estruturas metálicas para empreendimentos industriais e comerciais de grande porte.</p>
+        
+        <h2>Características Técnicas</h2>
+        <ul class="features-list">
+          <li>Material: Aço ASTM A572</li>
+          <li>Tratamento anticorrosivo</li>
+          <li>Garantia de 10 anos</li>
+          <li>Resistência a intempéries</li>
+        </ul>
+        
+        <h2>Especificações</h2>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-title">Carga Máxima</span>
+            <span class="spec-value">150 ton/m²</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-title">Dimensões</span>
+            <span class="spec-value">Sob medida</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-title">Certificações</span>
+            <span class="spec-value">ISO 9001</span>
+          </div>
+        </div>
+      </div>
+      
+      <a href="../index.html#services" class="btn back-button">← Voltar aos Serviços</a>
+    </div>
+  </main>
 
 </body>
 </html>
