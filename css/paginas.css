@@ -48,6 +48,13 @@ nav ul li a:hover {
     color: #5387EC;
 }
 
+.whatsapp-button{
+    position: fixed;
+    bottom: 1%;
+    z-index: 1000;
+    right: 3%;
+}
+
 /* Layout do Container Principal */
 .product-container {
     display: grid;
@@ -55,14 +62,18 @@ nav ul li a:hover {
     gap: 4rem;
     padding: 4rem;
     align-items: start;
-    max-width: 1300px;
-    margin: 15vh 5vw;
+    width: 90%;
+    margin-top: 15vh;
     background: rgba(255, 255, 255, 0.95);
     border-radius: 5px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
+    margin: auto;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
 }
+
 
 /* Container da Galeria */
 .gallery-container {
@@ -75,7 +86,7 @@ nav ul li a:hover {
 
 /* Galeria de Imagens */
 .main-image {
-    height: 400px;
+    height: 550px;
     border-radius: 5px;
     overflow: hidden;
     background: #f5f5f5;
@@ -127,9 +138,7 @@ nav ul li a:hover {
 
 /* Detalhes do Produto */
 .product-details {
-    padding: 1rem;
     position: sticky;
-    top: 120px;
     height: fit-content;
 }
 
@@ -138,7 +147,8 @@ nav ul li a:hover {
     color: #214D92;
     margin-bottom: 1.5rem;
     position: relative;
-    padding-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    margin-top: -20px;
 }
 
 .product-details h1::after {
@@ -156,7 +166,11 @@ nav ul li a:hover {
 }
 
 .product-description h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#espec{
+    margin-top: 1.5rem;
 }
 
 .features-list li {
@@ -204,6 +218,12 @@ nav ul li a:hover {
 }
 
 /* Botão Aprimorado */
+.centraliza{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
 .back-button {
     display: inline-flex;
     align-items: center;
@@ -211,6 +231,7 @@ nav ul li a:hover {
     padding: 1rem 2rem;
     background: #214D92;
     border: 2px solid transparent;
+    margin: auto;
 }
 
 .back-button:hover {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" href="../css/paginas.css">
+  <script defer src="../script/paginas.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="../index.html#home">Home</a></li>
+        <li><a href="../index.html#about">Sobre</a></li>
+        <li><a href="../index.html#services">Serviços</a></li>
+        <li><a href="../index.html#contact">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <a href="https://wa.me/5535998191876" class="whatsapp-button" target="_blank">
+    <img src="../imagens/whats.png" alt="WhatsApp">
+  </a>
+  
+  <main class="product-container">
+    <!-- Lado Esquerdo: Galeria de Imagens -->
+    <div class="product-gallery">
+      <!-- Imagem Principal -->
+      <div class="main-image">
+        <img src="../imagens/reservatorio.jpg" alt="Estrutura Metálica Industrial" id="mainImage">
+      </div>
+      <!-- Thumbnails -->
+      <div class="thumbnails">
+        <div class="thumbnail active" onclick="changeImage('../imagens/reservatorio.jpg', this)">
+          <img src="../imagens/reservatorio.jpg" alt="Vista frontal">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../imagens/taca2.jpeg', this)">
+          <img src="../imagens/taca2.jpeg" alt="Detalhes da estrutura">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../imagens/taca.jpeg', this)">
+          <img src="../imagens/taca.jpeg" alt="Instalação">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../imagens/taca3.jpg', this)">
+          <img src="../imagens/taca3.jpg" alt="Vista frontal">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../imagens/cilindro2.jpg', this)">
+          <img src="../imagens/cilindro2.jpg" alt="Detalhes da estrutura">
+        </div>
+        <div class="thumbnail" onclick="changeImage('../imagens/reservatorioCilindrico.jpeg', this)">
+          <img src="../imagens/reservatorioCilindrico.jpeg" alt="Instalação">
+        </div>
+        
+        
+      </div>
+    </div>
+
+    <!-- Lado Direito: Detalhes do Produto -->
+    <div class="product-details">
+      <h1>Reservatórios de Água</h1>
+      <div class="product-description">
+        <p>Soluções completas em estruturas metálicas para empreendimentos industriais e comerciais de grande porte.</p>
+        
+        <h2>Características Técnicas</h2>
+        <ul class="features-list">
+          <li>Soldagem: Processo GMAW (MIG) para máxima resistência e durabilidade</li>
+          <li>Tratamento anticorrosivo: Jateamento abrasivo padrão SA 2½</li>
+          <li>Pintura: Primer epóxi poliamina bicomponente e acabamento em poliuretano acrílico alifático</li>
+          <li>Certificações: Atende às normas do Ministério da Saúde e Diretiva RoHs</li>
+          <li>Resistência: Alta proteção contra intempéries, umidade e agentes corrosivos</li>
+        </ul>
+        
+        <h2 id="espec">Especificações</h2>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <span class="spec-title">Carga Máxima</span>
+            <span class="spec-value">150 ton/m²</span>
+          </div>
+          <div class="spec-item">
+            <span class="spec-title">Dimensões</span>
+            <span class="spec-value">Sob medida</span>
+          </div>
+          
+        </div>
+      </div>
+      <div class="centraliza">
+        <a href="https://wa.me/5535998191876" class="btn back-button" target="_blank" > Faça um Orçamento</a>
+      </div>
+      
+    </div>
+  </main>
+  <footer>
+    <div class="footer-links">
+        <a href="../index.html#home">Início</a>
+        <a href="../index.html#about">Sobre Nós</a>
+        <a href="../index.html#services">Serviços</a>
+        <a href="../index.html#contact">Contato</a>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Desenvolvido por RPM Marketing.</p>
+    </div>
+</footer>
+</body>
+</html>
