@@ -106,3 +106,4 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", updateHeaderColor);
     updateHeaderColor(); // Chama ao carregar a página
 });
+
