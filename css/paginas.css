@@ -46,12 +46,7 @@ nav ul li a:hover {
     color: #5387EC;
 }
 
-.whatsapp-button{
-    position: fixed;
-    bottom: 1%;
-    z-index: 1000;
-    right: 3%;
-}
+
 
 /* Layout do Container Principal */
 .product-container {
