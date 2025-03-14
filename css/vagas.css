@@ -1,0 +1,210 @@
+/* TRABALHE CONOSCO */
+.hero-trabalhe {
+    height: 60vh;
+    background: linear-gradient(rgba(33,77,146,0.8), rgba(33,77,146,0.8)),
+                url(../imagens/equipe2.JPG) center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.historia-box {
+    background: white;
+    padding: 4rem;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+    margin: 10px auto 50px;
+    position: relative;
+    max-width: 1200px;
+}
+
+h2 {
+    color: #214D92;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.marcos-historia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.marco {
+    text-align: center;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.ano {
+    font-size: 2.2rem;
+    color: #214D92;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.destaques {
+    columns: 2;
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.destaques li {
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #214D92;
+}
+
+.valores-trabalhe {
+    padding: 5rem 0;
+    background-color: #214D92;
+    height: 80vh;
+    margin: auto;
+}
+
+.valores-trabalhe h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.valor-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.valor-card img {
+    width: 80px;
+    margin-bottom: 1.5rem;
+}
+
+.formulario-trabalhe {
+    padding: 5rem 0;
+}
+
+.form-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+}
+
+.form-content h2 {
+    color: #214D92;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 0rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #214D92;
+    outline: none;
+}
+
+.btn-enviar {
+    background: #214D92;
+    color: white;
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 2rem auto 0;
+}
+
+.btn-enviar:hover {
+    background: #1a365d;
+}
+
+footer{
+    background: #214D92;
+}
+
+footer p{
+    color: white;
+}
+
+.footer-links a {
+    color: white; 
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #5387EC; 
+}
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .historia-box {
+        padding: 2rem;
+        margin-top: -50px;
+    }
+    
+    .destaques {
+        columns: 1;
+    }
+}

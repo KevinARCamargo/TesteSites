@@ -276,7 +276,9 @@ nav ul li a:hover {
 }
 
 .btn-about:hover {
-    background-color: #007BFF;
+    background: #1a365d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(26,54,93,0.3);
 }
 
 
@@ -426,9 +428,9 @@ nav ul li a:hover {
 /* Carrossel de Clientes */
 .clients {
     text-align: center;
-    padding: 10vh 20px; /* Reduzi o padding para melhor visualização */
+    padding: 20vh 20px; /* Reduzi o padding para melhor visualização */
     background: #f9f9f9;
-    min-height: 100vh; /* Alterei para min-height */
+    height: 110vh; 
 }
 
 .clients h2 {
