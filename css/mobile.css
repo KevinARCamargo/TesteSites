@@ -16,7 +16,6 @@
 /* Home */
 #home {
     height: auto;
-    
 }
 
 .banner {
@@ -28,18 +27,18 @@
 .banner img {
     margin-top: 5vh;
     width: 100%;
-    height: auto;
+    height: 30vh;
     display: block;
 }
 
 /* Sobre Nós */
 .about-us {
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
     height: auto;
 }
 
 .about-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
     padding: 0;
 }
@@ -60,6 +59,10 @@
 
 .about-content h2 {
     font-size: 2rem;
+}
+
+.btn-about{
+    display: none;
 }
 
 /* Serviços */
