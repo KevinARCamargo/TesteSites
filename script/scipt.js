@@ -107,3 +107,42 @@ document.addEventListener("DOMContentLoaded", function () {
     updateHeaderColor(); // Chama ao carregar a página
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll(".clientMob-carousel-image");
+  const prevButton = document.querySelector(".clientMob-carousel-control.prev");
+  const nextButton = document.querySelector(".clientMob-carousel-control.next");
+  let currentIndex = 0;
+  let interval;
+
+  // Função para alternar para a próxima imagem
+  const showNextImage = () => {
+    images[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add("active");
+  };
+
+  // Função para alternar para a imagem anterior
+  const showPrevImage = () => {
+    images[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    images[currentIndex].classList.add("active");
+  };
+
+  // Adicionar evento aos botões
+  nextButton.addEventListener("click", () => {
+    clearInterval(interval); // Parar rotação automática ao clicar
+    showNextImage();
+  });
+
+  prevButton.addEventListener("click", () => {
+    clearInterval(interval); // Parar rotação automática ao clicar
+    showPrevImage();
+  });
+
+  // Configurar rotação automática
+  const startCarousel2 = () => {
+    interval = setInterval(showNextImage, 10000); // 10 segundos
+  };
+
+  startCarousel2();
+});

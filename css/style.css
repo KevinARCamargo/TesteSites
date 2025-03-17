@@ -206,7 +206,7 @@ nav ul li a:hover {
 }
 
 /* Carrousel  About*/
-.about-carousel {
+.clientMob-carousel {
     position: relative;
     width: 100%; /* Ocupa 100% da largura do container */
     max-width: 500px; /* Define uma largura máxima para o carousel */
@@ -426,6 +426,13 @@ nav ul li a:hover {
 
 
 /* Carrossel de Clientes */
+.desktop-only { 
+    display: block; 
+}
+.mobile-only { 
+    display: none; 
+}
+
 .clients {
     text-align: center;
     padding: 20vh 20px; /* Reduzi o padding para melhor visualização */
@@ -650,6 +657,7 @@ footer {
 }
 
 .footer-bottom {
+    padding-bottom: 0.8rem;
     margin-top: 0.5rem; 
     font-size: 0.8rem; 
     color: #214D92;
