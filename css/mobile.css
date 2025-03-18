@@ -2,16 +2,91 @@
 @media (max-width: 768px) {
 
 .header-white {
-    position: absolute;
+    position: relative;
     background: #214D92;
     color: white;
 }
 
 .header-blue {
-    position: absolute;
+    position: relative;
     background: #214D92;
     color: white;
 }
+
+nav {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding: 0.3rem 1rem;
+}
+
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 2rem; 
+    height: 2rem;
+    cursor: pointer;
+    color: #214D92; /* Combina com o tema */
+    
+    z-index: 1000; /* Garante que o botão fique acima do menu */
+}
+
+.menu-toggle img{
+    margin: 0;
+    padding: 0;
+}
+
+
+.nav-links {
+    display: flex; 
+    flex-direction: column;
+    align-items: right;
+    background-color: #f9f9f9;
+    position: fixed;
+    top: 2.7rem;
+    right: 0;
+    width: 40%;
+    height: auto;
+    padding: 1rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    transform: translateX(100%); 
+    transition: transform 0.3s ease; 
+}
+
+.nav-links.show {
+    transform: translateX(0); 
+}
+
+.nav-links li {
+    list-style: none; 
+    margin: 0.5rem 0; 
+    padding: 0.5rem; 
+    border-bottom: 1px solid #f0f0f0; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.nav-links li:hover {
+    background-color: #214D92; 
+    transform: scale(1.05); 
+    border-radius: 5px; 
+}
+
+.nav-links a {
+    color: #214D92; 
+    font-size: 1.1rem; 
+    font-weight: 600; 
+    text-decoration: none; 
+    transition: color 0.3s ease; 
+}
+
+.nav-links a:hover {
+    color: #214D92; 
+}
+
+
 
 /* Home */
 #home {
@@ -25,15 +100,14 @@
 }
 
 .banner img {
-    margin-top: 5vh;
     width: 100%;
-    height: 30vh;
+    height: auto;
     display: block;
 }
 
 /* Sobre Nós */
 .about-us {
-    padding: 3rem 1rem;
+    padding: 3rem 2rem;
     height: auto;
 }
 
@@ -67,7 +141,7 @@
 
 /* Serviços */
 .services {
-    padding: 5rem 1rem;
+    padding: 3rem 2rem;
     height: auto;
 }
 
@@ -98,8 +172,7 @@
 
 /* Carrossel de Clientes */
 .clients {
-    
-    padding: 5vw; 
+    padding: 3rem 2rem;
     height: auto; 
 }
 .desktop-only { 
@@ -188,11 +261,11 @@
 /*Contato */
 .contact {
     height: auto;
-    padding-top: 5vw;
-    padding-bottom: 5vw;
 }
 
 .contact-content {
+    margin-top: 5vw;
+    margin-bottom: 5vw;
     width: 90%;
 }
 
@@ -209,10 +282,11 @@
 
 /*Rodapé*/
 footer {
-    padding: 0.8rem 2rem 1rem; 
+    padding: 0.8rem 2rem 0.5rem; 
     text-align: center;
     font-size: 0.9rem;
-    height: 10vh;
+    height: auto;
+    
 }
 
 .footer-links {
@@ -227,4 +301,86 @@ footer {
 
 
 
+/* Reservatórios */
+header{
+    background-color: #214D92;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 1.5rem;
+    border-radius: 15px;
+    
+}
+
+.product-details {
+    margin-top: 5vw;
+}
+
+.product-details h1 {
+    font-size: 2.2rem;
+}
+
+.product-gallery{
+    width: 100%;
+    
+}
+
+.main-image{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.main-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.main-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.thumbnails {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.specs-grid {
+    grid-template-columns: 1fr;
+}
+
+
+.footer-bottom {
+    margin-top: 0.5rem; 
+    font-size: 0.8rem; 
+}
+
+
+/* Vagas */
+#hmobile{
+    position: absolute;
+    background-color: transparent;
+}   
+
+.hero-trabalhe{
+    height: 50vh;
+    padding-top: 0px;
+}
+
+.valores-trabalhe{
+    height: auto;
+}
+
+.valores-grid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.valor-card{
+    width: 90%;
+}
 }
