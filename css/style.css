@@ -5,20 +5,12 @@ Branco: */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #333;
-}
-
-.logo {
-    position: absolute;
-    margin-top: 0.5rem;
-    margin-left: 1rem;
-    width: 70px; 
-    height: auto;
+    box-sizing: border-box;
 }
 
 header {
@@ -28,19 +20,12 @@ header {
     z-index: 1000;
 }
 
-header {
-    transition: background 1s ease, color 1 ease;
-}
-
 .header-white {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0) 65%, white 50%);
-    color: white;
-
 }
 
 .header-blue {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0) 65%, #214D92 50%);
-    color: white;
 }
 
 .header-blue nav ul a{
@@ -53,19 +38,18 @@ header {
 
 .header-blue nav ul a li  {
     color: white;
-    text-decoration: none;  /* Links brancos no fundo azul */
 }
 
 .header-white nav ul a li  {
-    color: #214D92; /* Links azuis no fundo branco */
+    color: #214D92; 
 }
 
 .header-white nav ul a:hover li  {
-    color: #5387EC; /* Efeito de hover no fundo branco */
+    color: #5387EC; 
 }
 
 .header-blue nav ul a:hover li  {
-    color: #5387EC; /* Efeito de hover no fundo azul */
+    color: #5387EC; 
 }
 
 .menu-toggle{
@@ -92,15 +76,10 @@ nav ul li {
 }
 
 nav ul a li  {
-    color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
-}
-
-nav ul a:hover li  {
-    color: #FFD700;
 }
 
 .whatsapp-button {
@@ -449,7 +428,7 @@ nav ul a:hover li  {
 
 .clients {
     text-align: center;
-    padding: 20vh 20px; /* Reduzi o padding para melhor visualização */
+    padding: 20vh 20px; 
     background: #f9f9f9;
     height: 110vh; 
 }
@@ -484,34 +463,39 @@ nav ul a:hover li  {
 
 .clientes-carousel-container {
     width: 85%;
-    height: 50%;
+    height: 30%;
     margin: auto;
     position: relative;
     overflow: hidden;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    box-sizing: border-box; /* Adicionado para incluir padding no cálculo de largura */
+    box-sizing: border-box; 
+    
 }
 
 .clientes-carousel-slides {
     display: flex;
-    width: 300%; /* Mantém 300% para 3 slides */
+    width: 300%;
+    height: 100%; 
     transition: transform 0.5s ease-in-out;
+    
     
 }
 
 .clientes-carousel-slide {
-    flex: 0 0 33.33333%; /* Cada slide ocupa 1/3 do container (100% / 3) */
+    margin: auto;
+    flex: 0 0 32%;
+    height: 100%; 
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 10px; 
+    position: relative;
 }
 
 .clientes-carousel-slide img {
-    max-width: 20%; 
-    max-height: 50%;/* Reduzido para 28% para acomodar melhor */
+    max-width: 250px; 
+    max-height: 100px;
     display: block;
     transition: filter 0.3s ease;
 }
@@ -642,7 +626,7 @@ footer {
     padding: 0.8rem 2rem 0.5rem; 
     text-align: center;
     font-size: 0.9rem;
-    height: 10vh;
+    height: auto;
 }
 
 .footer-content {

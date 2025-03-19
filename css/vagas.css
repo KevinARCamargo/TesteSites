@@ -4,6 +4,9 @@
 
 /* Configuração Específica da Página */
 
+*{
+    box-sizing: border-box;
+}
 
 header {
     position: absolute;
@@ -135,7 +138,6 @@ h2 {
 .form-content {
     max-width: 800px;
     margin: 0 auto;
-    background: white;
     padding: 2rem;
     border-radius: 15px;
 }
